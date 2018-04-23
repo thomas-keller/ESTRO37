@@ -112,7 +112,10 @@ rt %>%
 
 ```
 
+<p align="center"><img width="100%" height="auto" src="estro37_timeplot.png" /></p>
+
 # Sentiment analysis
+
 
 Again, another analysis I've done in the past, but here I'll use Mike Kearney's version simply to make my life a bit easier as it's mapping on to rtweet's data, and I haven't actually used the syuzhet, which is a commonly used sentiment analysis package.
 
@@ -161,6 +164,8 @@ rt %>%
     caption = "\nSource: Data gathered using rtweet. Sentiment analysis done using syuzhet")
 ```
 
+<p align="center"><img width="100%" height="auto" src="estro37_sentiment.png" /></p>
+
 # Tweet busters
 
 So... Who are the top ranking tweeps currently?
@@ -200,6 +205,10 @@ showvals[1:40,] %>%
        title="Top 40 retweeters of ESTRO37")
 ```
 
+<p align="center"><img width="100%" height="auto" src="top_tweets.png" /></p>
+
+<p align="center"><img width="100%" height="auto" src="top_retweets.png" /></p>
+
 # Influence (dubious)
 
 Here is that somewhat (very) dumb influence metric I cooked up or adapted from elsewhere, I can't quite remember at this point. Either way I don't put much value in it. It's basically just the sum of favorites and retweets
@@ -221,6 +230,9 @@ showvals2[1:40,] %>%
 
 
 ```
+
+<p align="center"><img width="100%" height="auto" src="influence.png" /></p>
+
 # Still using the hated word cloud 
 
 The word cloud gets a bad rap, I mean, it IS basically impossible to intrepret in any numerical or comparative sense. But I do still find it useful to get a quick overview of just what types of things people are talking about. And thus, wordclouds we go.
@@ -233,7 +245,7 @@ library(RColorBrewer)
 
 tidy_df = rt %>% unnest_tokens(word,text2)
 
-tw_stop<-data.frame(word=c("ESTRO37","estro37","rtt","n","24","30","1300" ,lexicon='whatevs'))
+tw_stop<-data.frame(word=c("ESTRO37","estro37","rtt","n","24","30","1300","22","htt","60","5y","hdr","300","70","ht","f","jc","592","13","70","40","19","qt","06","45","r","37","42","50","9","b","hn","4d") ,lexicon='whatevs')
 stop_words=filter(stopwordslangs,(lang=='en' | lang=="es")  & p >.9999) %>% pull(word)
 stop_words=tibble(word=stop_words)
 
@@ -245,10 +257,12 @@ tidy_cloud <- tidy_df %>%
 hm=tidy_cloud %>%
  count(word)
 library(wordcloud)
-wordcloud(hm$word, hm$n,max.words = 150,colors=brewer.pal(8,'Dark2'),random.order=FALSE,random.color=FALSE)
+wordcloud(hm$word, hm$n,colors=brewer.pal(8,'Dark2'),random.order=FALSE,random.color=FALSE,min.freq=3)
  
 ```
 
+
+<p align="center"><img width="100%" height="auto" src="wordcloud.png" /></p>
 
 # Finally, the network
 
@@ -387,3 +401,9 @@ ggraph(red_gr_rt, layout = 'linear', circular = TRUE) +
   
  
 ```
+
+
+<p align="center"><img width="100%" height="auto" src="mention_estro37.png" /></p>
+
+
+<p align="center"><img width="100%" height="auto" src="estro37_retweet_net.png" /></p>
