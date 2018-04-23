@@ -262,7 +262,7 @@ wordcloud(hm$word, hm$n,colors=brewer.pal(8,'Dark2'),random.order=FALSE,random.c
 ```
 
 
-<p align="center"><img width="100%" height="auto" src="wordcloud.png" /></p>
+<p align="center"><img width="100%" height="auto" src="wordplot_estro37.png" /></p>
 
 # Finally, the network
 
@@ -406,4 +406,4 @@ ggraph(red_gr_rt, layout = 'linear', circular = TRUE) +
 <p align="center"><img width="100%" height="auto" src="mention_estro37.png" /></p>
 
 
-<p align="center"><img width="100%" height="auto" src="estro37_retweet_net.png" /></p>
+<p align="center"><img width="100%" height="auto" src="estro37_rtweet_net.png" /></p>
