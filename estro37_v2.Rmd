@@ -207,7 +207,7 @@ showvals[1:40,] %>%
 
 <p align="center"><img width="100%" height="auto" src="top_tweets.png" /></p>
 
-<p align="center"><img width="100%" height="auto" src="top_retweets.png" /></p>
+<p align="center"><img width="100%" height="auto" src="top_rtweets.png" /></p>
 
 # Influence (dubious)
 
@@ -257,7 +257,7 @@ tidy_cloud <- tidy_df %>%
 hm=tidy_cloud %>%
  count(word)
 library(wordcloud)
-wordcloud(hm$word, hm$n,colors=brewer.pal(8,'Dark2'),random.order=FALSE,random.color=FALSE,min.freq=3)
+wordcloud(hm$word, hm$n,colors=brewer.pal(8,'Dark2'),random.order=FALSE,random.color=FALSE,min.freq=5,scale=c(4,.3),max.words=250)
  
 ```
 
@@ -333,7 +333,7 @@ ggraph(red_gr, layout = 'linear', circular = TRUE) +
   
   scale_size_area(trans="sqrt") +
   
-  labs(title="Mention Relationships", subtitle="Most mentioned screen names labeled. Darkers edges == more retweets. Node size == larger degree") +
+  labs(title="Mention Relationships", subtitle="Most mentioned screen names labeled. Darkers edges == more mentions. Node size == larger degree") +
   
   theme_graph(base_family=font_rc) +
   
