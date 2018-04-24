@@ -207,7 +207,7 @@ showvals[1:40,] %>%
 
 <p align="center"><img width="100%" height="auto" src="top_tweets.png" /></p>
 
-<p align="center"><img width="100%" height="auto" src="top_rtweets.png" /></p>
+<p align="center"><img width="100%" height="auto" src="top_retweets.png" /></p>
 
 # Influence (dubious)
 

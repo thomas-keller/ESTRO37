@@ -42,7 +42,7 @@ top 40 tweeters:
 top 40 retweeters:
 
 <p align="center">
-<img width="100%" height="auto" src="top_rtweets.png" />
+<img width="100%" height="auto" src="top_retweets.png" />
 </p>
 
 
