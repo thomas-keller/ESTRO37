@@ -36,13 +36,13 @@ sentiment (how many positive vs negative words are being used during a given per
 top 40 tweeters:
 
 <p align="center">
-<img width="100%" height="auto" src="top_tweeters.png" />
+<img width="100%" height="auto" src="top_tweets.png" />
 </p>
 
 top 40 retweeters:
 
 <p align="center">
-<img width="100%" height="auto" src="estro37_retweeters.png" />
+<img width="100%" height="auto" src="top_rtweets.png" />
 </p>
 
 
