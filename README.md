@@ -61,7 +61,7 @@ wordcloud (hate AND appreciate!):
 mention network:
 
 <p align="center">
-<img width="100%" height="auto" src="estro37_estro37.png" />
+<img width="100%" height="auto" src="mention_estro.png" />
 </p>
 
 retweet network:
